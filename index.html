@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelWave</title>
+    <!-- Link Font Awsome libarary -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="/css/master.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- AOS CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Start Setting Box -->
+    <div class="settings-box glass-card">
+        <div class="gear-spin glass-card">
+            <i class="fa fa-gear"></i>
+        </div>
+        <div class="settings-container">
+            <div class="option-box">
+                <h4>Colors</h4>
+                <ul class="colors-list">
+                    <li class="active " data-color="#0000ff"></li>
+                    <li data-color="#ff0000"></li>
+                    <li data-color="#009688"></li>
+                    <li data-color="#008000"></li>
+                </ul>
+            </div>
+            <div class="option-box">
+                <h4>Change Background</h4>
+                <div class="arrows">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+            <div class="option-box">
+                <h4 class="background-change">Stop  Random Background</h4>
+                <div class="play">
+                    <i class="fa-solid fa-play"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Setting Box -->
+    <!-- Start Landing page -->
+    <div class="landing-page" id="home">
+        <div class="overlay">
+            <div class="container">
+                <div class="header-area">
+                    <div class="logo gradient-text">PixelWave </div>
+                    <ul>
+                        <li><a href="#home" class="active">Home</a></li>
+                        <li ><a href="#services">Services</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="intro-text">
+                    <h1>We Are Creative Agacny</h1>
+                    <p>
+                        From bold branding to seamless user experiences, we build digital identities that stand out and succeed.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Landing page -->
+    <!-- start About us section -->
+    <div class="about-us" id="about">
+        <div class="container">
+            <div class="info-box" data-aos="fade-up" data-aos-duration="1500">
+                <h2 class="typing">Who We Are</h2>
+                <p >We're a passionate team of designers, 
+                    developers, and storytellers 
+                    who believe creativity has the power to 
+                    transform brands. Whether you're a startup 
+                    or an established business, we're here to craft experiences that 
+                    connect, engage, and inspire.
+                </p>
+            </div>
+            <div class="about-us-image" data-aos="fade-up" data-aos-duration="1500">
+                <img src="images/aboutUs.avif" alt="About Us">
+            </div>
+        </div>
+    </div>
+    <!-- start About us section -->
+    <!-- Start Service Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+            <div class="service-box" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
+                <i class="fas fa-pencil-ruler"></i>
+                <h3>Branding & Identity</h3>
+                <p>Crafting unique brand visuals that leave a lasting impression.</p>
+            </div>
+            <div class="service-box" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Web Design & Development</h3>
+                <p>Beautiful, responsive websites designed to convert.</p>
+            </div>
+            <div class="service-box" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
+                <i class="fas fa-bullhorn"></i>
+                <h3>Digital Marketing</h3>
+                <p>Strategies to grow your audience and boost your online presence.</p>
+            </div>
+            <div class="service-box" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">
+                <i class="fa-brands fa-figma"></i>
+                <h3>UI & UX Desings</h3>
+                <p>We design intuitive, user-friendly interfaces that provide a seamless experience.</p>
+            </div>
+            <div class="service-box" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600">
+                <i class="fa-solid fa-palette"></i>
+                <h3> Content Creation</h3>
+                <p>Engage your audience with impactful content—blogs, videos, visuals, and more—tailored to your brand’s story.</p>
+            </div>
+            <div class="service-box" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="700">
+                <i class="fa-solid fa-rectangle-ad"></i>
+                <h3>Paid Advertising (PPC)</h3>
+                <p>Maximize ROI with data-driven ad campaigns across Google, Meta, LinkedIn, and more.</p>
+            </div>
+            </div>
+        </div>
+    </section>
+    <!-- Start Service Section -->
+    <!-- Our Gallery Section -->
+    <div class="gallery" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Our Desings</h2>
+            <div class="images-box">
+                <img src="/images/01.jpg" alt="" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1000">
+                <img src="/images/02.jpg" alt="" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1000">
+                <img src="/images/04.jpg" alt="" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1000">
+                <img src="/images/03.webp" alt="" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1000">
+                <img src="/images/05.jpg" alt="" data-aos="zoom-in" data-aos-delay="600" data-aos-duration="1000">
+                <img src="/images/06.jpg" alt="" data-aos="zoom-in" data-aos-delay="700" data-aos-duration="1000">
+                <img src="/images/07.jpg" alt="" data-aos="zoom-in" data-aos-delay="800" data-aos-duration="1000">
+                <img src="/images/08.jpeg" alt="" data-aos="zoom-in" data-aos-delay="900" data-aos-duration="1000">
+                <img src="/images/09.avif" alt="" data-aos="zoom-in" data-aos-delay="1000" data-aos-duration="1000">
+                <img src="/images/10.avif" alt="" data-aos="zoom-in" data-aos-delay="1100" data-aos-duration="1000">
+            </div>
+        </div>
+    </div>
+    <!-- Our Gallery Section -->
+    <!-- Timeline section -->
+    <section class="timeline">
+        <div class="container">
+            <h2 class="section-title">Timeline</h2>
+            <div class="timeline-content">
+            <!-- Event 1 (left) -->
+            <div class="event">
+                <div class="box left" data-aos="fade-right" data-aos-duration="1000">
+                <h4>Brand Strategy</h4>
+                <div class="timeline-title">
+                    <p><i class="fa-solid fa-circle"></i> Branding Strategy</p>
+                    <p><i class="fa-solid fa-calendar-days"></i> June 2016 – Present</p>
+                </div>
+                <div class="timeline-text">
+                    We help create a consistent brand identity that resonates with your audience.
+                </div>
+                <ul>
+                    <li>Research</li><li>Design</li><li>Identity</li>
+                </ul>
+                </div>
+            </div>
+            <!-- Event 2 (right) -->
+            <div class="event">
+                <div class="box right" data-aos="fade-left" data-aos-duration="1000">
+                <h4>Digital Marketing</h4>
+                <div class="timeline-title">
+                    <p><i class="fa-solid fa-circle"></i> Digital Marketing</p>
+                    <p><i class="fa-solid fa-calendar-days"></i> Jan 2018 – Present</p>
+                </div>
+                <div class="timeline-text">
+                    We use SEO, content marketing, and ads to grow your digital presence.
+                </div>
+                <ul>
+                    <li>SEO</li>
+                    <li>Google Ads</li>
+                    <li>Content</li>
+                </ul>
+                </div>
+            </div>
+            <!-- Event 1 (left) -->
+            <div class="event">
+                <div class="box left" data-aos="fade-right" data-aos-duration="1000">
+                <h4>Brand Strategy</h4>
+                <div class="timeline-title">
+                    <p><i class="fa-solid fa-circle"></i> Branding Strategy</p>
+                    <p><i class="fa-solid fa-calendar-days"></i> June 2016 – Present</p>
+                </div>
+                <div class="timeline-text">
+                    <p>We help create a consistent brand identity that resonates with your audience.</p>
+                </div>
+                <ul>
+                    <li>Research</li><li>Design</li><li>Identity</li>
+                </ul>
+                </div>
+            </div>
+            <!-- Event 2 (right) -->
+            <div class="event">
+                <div class="box right" data-aos="fade-left" data-aos-duration="1000">
+                <h4>Digital Marketing</h4>
+                <div class="timeline-title">
+                    <p><i class="fa-solid fa-circle"></i> Digital Marketing</p>
+                    <p><i class="fa-solid fa-calendar-days"></i> Jan 2018 – Present</p>
+                </div>
+                <div class="timeline-text">
+                    We use SEO, content marketing, and ads to grow your digital presence.
+                </div>
+                <ul>
+                    <li>SEO</li><li>Google Ads</li><li>Content</li>
+                </ul>
+                </div>
+            </div>
+            <!-- Add more .event blocks as needed, they’ll auto‑alternate -->
+            
+            </div>
+        </div>
+        </section>
+    <!-- Timeline section -->
+    <!-- Testmonials Section -->
+    <section class="tm">
+        <div class="container">
+            <img src="/images/dots.png" alt="" class="dot1">
+            <h2 class="section-title">What Our Customer <br>Are Saying</h2>
+            <div class="tm-content">
+                <div class="tm-image">
+                    <img src="/images/tm.jpg" alt="" id="testimonial-img">
+                    <div class="tm-arrows">
+                        <i class="fa-solid fa-arrow-left" id="prev-btn"></i>
+                        <i class="fa-solid fa-arrow-right" id="next-btn"></i>
+                    </div>
+                </div>
+                <div class="tm-text">
+                    <h3>Exceptional Service That Delivered Results</h3>
+                    <p>Partnering with PixelCraft Studio has been one of the best decisions we’ve made. Their creative approach and attention to detail helped us launch a brand identity that truly resonates with our audience. We saw a 40% increase in engagement within the first month.</p>
+                    <h4>Samantha William</h4>
+                    <p class="postion">Senior Designer at PixelCraft Studio</p>
+                </div>                
+            </div>
+        </div>
+    </section>
+    <!-- Testmonials Section -->
+    <!-- Contact Us Section -->
+    <section class="contact-us" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="contact-us-title ">
+                    How You Can Reach Us.
+                </h2>
+                <p></p>
+            </div>
+            <div class="form">
+                <form id="contact-form">
+                    <label for="text">Name</label>
+                    <input type="text" name="from_name"  required>
+                    <label for="email">Email Address</label>
+                    <input type="email" name="reply_to" placeholder="example@gmail.com" required>
+                    <label for="text">Subject</label>
+                    <input type="text" name="Subject"  required>
+                    <label for="massage">Your Message</label>
+                    <textarea name="message"  required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+                <div id="popup" class="popup">
+                    <div class="popup-content">
+                        <p>✅ Message sent successfully!</p>
+                        <button onclick="closePopup()">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Us Section -->
+    <!--Footer  -->
+    <footer class="site-footer">
+        <div class="footer-container">
+          <div class="footer-left">
+            <h3>PixelWave</h3>
+            <p>123 Main Street, Cair, Egypt</p>
+            <p>Email: PixelWave@gmail.com</p>
+            <p>Phone: +123 456 7890</p>
+          </div>
+          <div class="footer-right">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 PixelWave. all rights reserved.</p>
+        </div>
+      </footer>
+      
+    <!--Footer  -->
+    
+    
+    <script src="/js/master.js"></script>
+    <!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+(function(){
+    emailjs.init("upIAE2tJiA6SCxlfu"); // From EmailJS dashboard
+})();
+</script>
+
+</body>
+</html>
