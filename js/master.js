@@ -278,6 +278,13 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+document.querySelectorAll(".header-area ul li").forEach(li => {
+    li.addEventListener("click", function() {
+        const menu = document.querySelector(".header-area ul");
+        menu.classList.toggle("active");
+    })
+})
+
 
 function removeAOS(){
     if(window.innerWidth <= 767){
