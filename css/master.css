@@ -237,6 +237,7 @@ a{
         width: 200px;
         border-radius: 8px;
         display: none;
+        z-index: 2000;
     }
 
     .landing-page .header-area ul li {
