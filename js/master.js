@@ -280,7 +280,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 function removeAOS(){
-    if(window.innerWidth > 767){
+    if(window.innerWidth <= 767){
         document.querySelectorAll(".event .box").forEach(element => {
             element.removeAttribute("data-aos")
         })
