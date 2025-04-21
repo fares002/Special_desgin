@@ -225,6 +225,7 @@ a{
         position: absolute;
         top: 25px;
         right: 25px;
+        z-index: 100;
     }
 
     .landing-page .header-area ul {
@@ -237,12 +238,13 @@ a{
         width: 200px;
         border-radius: 8px;
         display: none;
-        z-index: 2000;
+        z-index: 100;
     }
 
     .landing-page .header-area ul li {
         width: 100%;
         border-bottom:1px solid #777 ;
+        z-index: 100;
     }
 
     .landing-page .header-area ul li:hover{
