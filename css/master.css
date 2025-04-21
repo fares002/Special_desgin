@@ -706,7 +706,7 @@ a{
         grid-column: auto;
         justify-self: auto;
         margin: 0 0 0 20px;
-        width: 350px;
+        width: fit-content;
     }
 
 
