@@ -181,7 +181,7 @@ a{
 
 .landing-page .header-area{
     position: relative;
-    z-index: 2;
+    z-index: 100;
     display: flex;
     justify-content: space-between;
     padding: 20px 0 0 0;
@@ -222,7 +222,7 @@ a{
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
-        position: absolute;
+        position: fixed;
         top: 25px;
         right: 25px;
         z-index: 100;
@@ -231,7 +231,7 @@ a{
     .landing-page .header-area ul {
         flex-direction: column;
         background-color: rgba(0, 0, 0, 0.9);
-        position: absolute;
+        position: fixed;
         top: 70px;
         right: 20px;
         padding: 30px;
