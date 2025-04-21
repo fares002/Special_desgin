@@ -4,12 +4,17 @@ html {
 
 body{
     font-family: "Work Sans", sans-serif;
+    overflow-x: hidden;
 }
 
 :root{
     --main-Transtion: 1s;
-    --main-Color:#56ab2f
-    --main-text:
+    --main-Color:#56ab2f;
+
+}
+
+*{
+    box-sizing: border-box;
 }
 
 
@@ -155,7 +160,7 @@ a{
 /* Start landing Page */
 .landing-page{
     min-height: 100vh;
-    background-image: url('../images/landing.jpg');
+    background-image: url('../images/01.jpg');
     background-size: cover;
     position: relative;
     color: #FFF;
@@ -206,6 +211,38 @@ a{
 }
 
 
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: var(--main-Color);
+    cursor: pointer;
+    z-index: 3;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 25px;
+        right: 25px;
+    }
+
+    .landing-page .header-area ul {
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        padding: 10px;
+        border-radius: 8px;
+        display: none;
+    }
+
+    .landing-page .header-area ul.active {
+        display: flex;
+    }
+}
+
 @media (max-width: 767px) {
     .landing-page .header-area .logo{
         place-items: start;
@@ -214,6 +251,8 @@ a{
         display: none;
     }
 }
+
+
 
 .landing-page .header-area ul li a{
     cursor: pointer;
@@ -392,7 +431,7 @@ a{
     background: #fff;
     border-radius: 12px;
     padding: 30px 20px;
-    width: 300px;
+    width: 350px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
 }
@@ -437,7 +476,7 @@ a{
 
 .gallery .images-box{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 15px;
     place-items: center;
 }
@@ -445,8 +484,8 @@ a{
     padding: 3px;
     border: 1px solid var(--main-Color);
     border-radius: 3px;
-    width: 220px;
-    height: 150px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     cursor: pointer;
 
@@ -505,11 +544,11 @@ a{
     -webkit-text-fill-color: transparent;
 }
 
-/* The vertical center line */
 .timeline-content {
     position: relative;
-    padding: 2rem 0;
+    padding: 50px;
 }
+/* The vertical center line */
 .timeline-content::before {
     content: "";
     position: absolute;
@@ -528,7 +567,7 @@ a{
       calc(50% - 2px) /* left slot */
       4px              /* center line slot */
       calc(50% - 2px) /* right slot */;
-    margin-bottom: 2rem;
+    margin-bottom: 40px;
     position: relative;
 }
 /* draw the circle on the line */
@@ -547,17 +586,23 @@ a{
 
 /* Box styling & alternating sides */
 .box {
+    display: grid;
+    place-items: center;
     background: #fff;
-    padding: 10px;
-    border-radius: 10px;
+    padding: 20px;
+    border-radius: 20px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     position: relative;
-    width: 90%;
+
     z-index: 3;
 }
 /* odd events → left, even → right */
 .event:nth-child(odd)  .box { grid-column: 1; justify-self: end; margin-right: 20px;}
 .event:nth-child(even) .box { grid-column: 3; justify-self: start; margin-left: 20px;}
+
+.box h4{
+    margin-bottom: 10px;
+}
 
 /* arrow pointing into the circle */
 .box.left::after,
@@ -581,81 +626,96 @@ a{
 .timeline-title {
     display: flex;
     justify-content: space-between;
-    margin: .5rem 0;
+    gap: 30px;
+    margin-bottom: 10px;
+    max-width: 100%;
 }
 .timeline-title p { color: #777; }
 .timeline-text { color: #777; line-height: 1.5; margin-bottom: .75rem; }
-.box ul {
+.timeline .box ul {
     display: flex;
     justify-content: center;
-    gap: .5rem;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    max-width: 100%;
 }
-.box ul li {
+.timeline .box ul li {
     padding: 3px 8px;
     background: #ddd;
     border-radius: 5px;
     color: #777;
 }
 
-/* Responsive: stack everything center */
+
+
 @media (max-width: 768px) {
-    /* 1) Make timeline-content a simple container with left padding */
-    .timeline-content {
-      padding-left: 60px;     /* space for line + arrows */
-    }
-    /* 2) Position the vertical line at 30px from the left edge */
-    .timeline-content::before {
-        left: 30px !important;
-        transform: none !important;
-    }
-    /* 3) Each event becomes block (full width of container) */
-    .event {
-    display: block;
-    margin-bottom: 2rem;
-    }
-    /* 4) Centered circle moves to 30px, aligned with line */
-    .event::before {
-    left: 10px !important;
-    transform: translateX(-240%) !important;
-    }
-
-    /* 5) Boxes sit to the right of that line */
-    .box {
-    position: relative;
-      margin: 0 0 0 0;      /* push box right of line+circle */
-    width: calc(100% - 60px);
-    padding: 15px;
-    }
-
-    /* 6) Restore arrow for all boxes, pointing left */
-    .box::after {
-    content: "";
-    position: absolute;
-    top: 20px;               /* tweak to vertically center on circle */
-    left: -16px;             /* sits just left of the box edge */
-    width: 0;
-    height: 0;
-    border-top: 8px solid transparent;
-    border-bottom: 8px solid transparent;
-    border-right: 8px solid #fff; /* arrow head */
-    z-index: 3;
-    }
-
-    .box.left::after {
-        right: -16px;
-        border-right-color: #fff;
-    }
-
-    .box ul{
-        justify-content: flex-end;
+    .timeline {
         max-width: 100%;
     }
-    .box.left,
-    .box.right{
-        margin: 0;
+  
+    .timeline-content {
+        padding-left: 20px;
+    }
+  
+    /* Vertical line on the left */
+    .timeline-content::before {
+        left: 20px;
+        transform: none;
+    }
+  
+    .event {
+        display: block;
+        margin-bottom: 40px;
+    }
+  
+    .event::before {
+        left: -8px;
+        transform: none;
+        top: 24px;
+    }
+  
+
+    .box {
+        position: relative;
+        width: calc(100% - 60px);
+        margin-left: 20px;
+        padding: 15px;
+    }
+  
+    .box.left::after,
+    .box.right::after {
+        content: "";
+        position: absolute;
+        top: 24px;  
+        width: 0; height: 0;
+
+    }
+    .box.left::after {
+      left: -16px;    
+      border: 8px solid transparent;            
+      border-right-color: #fff;  
+    }
+    .box.right::after {
+        left: -16px;
+        border: 8px solid transparent;
+        border-right-color: #fff;
+    }
+    .event:nth-child(odd) .box,
+    .event:nth-child(even) .box {
+        grid-column: auto;
+        justify-self: auto;
+        margin: 0 0 0 20px;
+        width: fit-content;
+    }
+
+
+
+    .box ul {
+        justify-content: flex-start;
+        max-width: 100%;
     }
 }
-
 
 /* Tm Section */
 .tm {
@@ -758,6 +818,16 @@ a{
 
 }
 
+@media (max-width:991px) {
+    .tm-content .tm-text{
+    padding-left: 0;
+}
+.tm-content .tm-image img{
+    max-width: 350px;
+}
+    
+}
+
 @media (max-width:767px) {
     .tm-content{
         flex-direction: column;
@@ -831,7 +901,7 @@ a{
 }
 
 .form {
-    flex: 1 1 400px;
+
     background-color: #fff;
     padding: 30px;
     border-radius: 15px;
@@ -899,8 +969,11 @@ a{
     }
 
     .form {
-        width: 100%;
         max-width: 500px;
+    }
+    .form form {
+        width: 250px;
+
     }
 
     .contact-us-title {
@@ -1007,3 +1080,5 @@ a{
   }
   
 /* footer Section */
+
+

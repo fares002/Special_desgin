@@ -2,8 +2,6 @@
 let mainColor = localStorage.getItem("colorOption");
 
 if(mainColor !== null){
-    console.log(`your color is ${mainColor}`)
-    //setting the value in the local storage in the root
     document.documentElement.style.setProperty("--main-Color", mainColor)
     document.querySelectorAll(".colors-list li").forEach(element => {
         element.classList.remove("active")
@@ -84,7 +82,7 @@ links.forEach((link)=>{
 //settings-box
 let isOpen = true;
 let settings = document.querySelector(".settings-box")
-console.log(settings)
+
 let settingsGear = document.querySelector(".settings-box .gear-spin")
 let Gear = document.querySelector(".settings-box .fa-gear")
 
@@ -143,7 +141,6 @@ window.onload = () => {
 
 let ourGalley = document.querySelectorAll(".gallery .images-box img")
 
-console.log(ourGalley)
 
 ourGalley.forEach( img => {
     img.addEventListener("click", (e) => {
@@ -271,3 +268,25 @@ function closePopup() {
 }
 
 
+
+document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.getElementById("menuToggle");
+    const menu = document.querySelector(".header-area ul");
+    toggle.addEventListener("click", () => {
+    menu.classList.toggle("active");
+    });
+});
+
+
+
+function removeAOS(){
+    if(window.innerWidth > 767){
+        document.querySelectorAll(".event .box").forEach(element => {
+            element.removeAttribute("data-aos")
+        })
+    }
+}
+
+
+document.addEventListener("DOMContentLoaded", removeAOS);
+window.addEventListener("resize", removeAOS);
